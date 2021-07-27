@@ -13,5 +13,10 @@ variable "zones" {
 variable "tags" {
   description = "Tags added to all zones. Will take precedence over tags from the 'zones' variable"
   type        = map(any)
-  default     = {}
+  default     = {
+    name        = "campspot-default-zone",
+    customer    = "campspot",
+    environment = "${terraform.workspace}",
+    costcenter  = "default",
+  }
 }
