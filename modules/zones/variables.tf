@@ -16,7 +16,7 @@ variable "tags" {
   default     = {
     name        = "campspot-default-zone",
     customer    = "campspot",
-    environment = "${terraform.workspace}",
+    environment = "default",
     costcenter  = "default",
   }
 }
